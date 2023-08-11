@@ -4,7 +4,7 @@
 Running demo:     
 https://online-python.onrender.com/
 
-Free hosting kindly supplied by https://render.com/ 
+Free hosting kindly provided by https://render.com/ 
 
 <hr>
 
