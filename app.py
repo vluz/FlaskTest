@@ -24,7 +24,7 @@ def code():
             return render_template('code.html',result=result)
 
     if request.method == 'GET':
-        result={"code":"print('Hello World')","codeoutput":"Hello World", "env":"/"}
+        result={"code":"print('Hello World')","codeoutput":"", "env":"/"}
         return render_template('code.html',result=result) 
 
 if __name__ == '__main__':
