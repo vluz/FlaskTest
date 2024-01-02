@@ -15,11 +15,11 @@ def code():
         pipe = subprocess.run(["python", "onlinecode.py"], capture_output=True)
 
         if pipe.returncode == 0:
-            codeoutput = re.sub('[^A-Za-z0-9().,\n\t ]+', '',pipe.stdout.decode('utf-8'))
+            codeoutput = re.sub('[^A-Za-z0-9().-+:,\n\t ]+', '',pipe.stdout.decode('utf-8'))
             result={"code":code,"codeoutput":codeoutput, "env":"/"}
             return render_template('code.html',result=result)
         else:
-            codeoutput = re.sub('[^A-Za-z0-9().,\n\t ]+', '',pipe.stderr.decode('utf-8'))
+            codeoutput = re.sub('[^A-Za-z0-9().-+:,\n\t ]+', '',pipe.stderr.decode('utf-8'))
             result={"code":code,"codeoutput":codeoutput, "env":"/"}
             return render_template('code.html',result=result)
 
